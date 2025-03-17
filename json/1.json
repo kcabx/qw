@@ -1,1 +1,32 @@
-0860b4bdfa6255ebc8136d01c2bad9e5f8a10960ead561d0c8595bf0508b689d589d758e404e39ca94a524f172ec5738ccf38d9500275ab977fa536ca405f1fa7e03d9b317e8e72d0f33cfa51004a63e8d4023e3d529f3f37d071689dcf90967051920e0d8b62773bdc4d3040d8f18b92338223818709dd2b808a11e4ffbaf98fbfd3d73d491567bb38e8cde91d02bcf5ab534aa8eafff07051f71e51fc8f94bfc55cd584888b4cbe6b3231ed5c5ab74fdfb3032557cc902f8593f9ab60f297e333f47d42aad5c5688b9e774bbdd5bda981ab75c295161162735e46cc5525967002f8aaafbdd083b7f347a9496b33bc3bb4a441861fde6512d3ef3d2150bc4f0ebe7342f34c354bb05abbf5befbb911d26bb4f42fbf90c6cd6122ab0e39ca77c85ce754a9fab668b4487394ff9c54e8166ddfd7074e72570337033fd9036242016174f6adb5a1e0d6d4a083bfd43ce07d18841f1ce711874d19c31c2e49136bdfee5cd51e46ca3d7c65fe5aa1c1b831aabb3fafd057ba7c2394b4090b41a209bf6d819ba2c7cefd8ed380bc04975a844e586c089159ca0d376c9abce69c339c4ba200370b799db0b6c2361c7f932a2e5e0e8a8fe7933876cbf5b2ee7b2aadf1a242622032780e39ec82af1592030fba37fd8e88f08311424aacfb0d87d9f1cb31ad537599d63a73414ccaef737ea5bb00f5c4fe58098009e7d5453c6049b053d4130dd355464c039038e6b6d8f22ec062967081e92d34bb91c604233d0a0de5545ca27eed09307696cbff4391e2a940efd44343b49db19d63cafba3b8205f10a131338e18abe6086cd0131d4900eb0ec8518b7cef4c93540ca35d12077de31567ec839c58a2e7966d5c662a7828b84f9b98c35fc3f1d9b7a66c204a7c3ed06c4d19fe97f08058312a09958c1d58348d4d07b6bdaf3ca2a0f0661cdb45b54c2006c12d1d0bc1bac1b2be7242fcc40ae5fafc816d0eab61784c2e404c16b7947dd6d369993c42b0c2776d0b7911294d53ca32b9d25a2c7439a4f5b56dc94203ec253acac8d44baed25c639128f25d187577ccf86b58abcc3612ecf7085f9d5aeb092686bc84ba819b2103483966803fb0e9d8a609b5b5bf4354c7c948008a9aca66ffc7d74739ecbed7eeaba91432529fdc9ecc0944f463b9814f6e27ebf71affa
+{
+    "title": "蟹老板欢迎您",
+    "keywords": "蟹老板",
+    "description": "蟹老板",
+    "welcomeMessage": {
+        "chinese": "欢迎进入网站",
+        "english": "Welcome to the website"
+    },
+    "buttons": [
+        {
+            "text": "粒子平滑告白",
+            "href": "main.html"
+        },
+        {
+            "text": "心动小表情",
+            "href": "行动派.html"
+        },
+        {
+            "text": "二级展示菜单",
+            "href": "main/index.html"
+        },
+        {
+            "text": "三级综合板块",
+            "href": "uml/index.html"
+        },
+        {
+            "text": "共享图集",
+            "href": "uml/video.html"
+        }
+    ],
+    "footerText": "Mr.Krabs ©ShaoFa三个和尚网络传媒有限公司"
+}
