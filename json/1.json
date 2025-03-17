@@ -1,0 +1,32 @@
+{
+    "title": "蟹老板欢迎您",
+    "keywords": "蟹老板",
+    "description": "蟹老板",
+    "welcomeMessage": {
+        "chinese": "欢迎进入网站",
+        "english": "Welcome to the website"
+    },
+    "buttons": [
+        {
+            "text": "粒子平滑告白",
+            "href": "main.html"
+        },
+        {
+            "text": "心动小表情",
+            "href": "行动派.html"
+        },
+        {
+            "text": "二级展示菜单",
+            "href": "main/index.html"
+        },
+        {
+            "text": "三级综合板块",
+            "href": "uml/index.html"
+        },
+        {
+            "text": "共享图集",
+            "href": "uml/video.html"
+        }
+    ],
+    "footerText": "Mr.Krabs ©ShaoFa三个和尚网络传媒有限公司"
+}

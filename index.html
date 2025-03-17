@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载中...</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://qm.qq.com/q/1kaNhsMAoo">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" media="all" />
+</head>
+<body>
+    <div class="glass-effect">
+        <h3 id="welcome-ch"></h3>
+        <h4 id="welcome-en"></h4>
+        <div id="button-container"></div>
+        <p class="foottitle"></p>
+    </div>
+
+    <script>
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // 禁用F12、Ctrl+Shift+I、Ctrl+Shift+J、Ctrl+U
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey && (event.key === "u" || event.key === "U" || event.key === "s" || event.key === "S" ||
+                event.key === "i" || event.key === "I" || event.key === "j" || event.key === "J")) {
+                event.preventDefault();
+            }
+        });
+
+        // 动态加载 JSON 数据并填充网页内容
+        window.onload = function() {
+            fetch('json/1.json')
+                .then(response => response.json())
+                .then(data => {
+                    // 设置网页标题
+                    document.title = data.title;
+                    document.querySelector('meta[name="keywords"]').setAttribute("content", data.keywords);
+                    document.querySelector('meta[name="description"]').setAttribute("content", data.description);
+
+                    // 更新欢迎信息
+                    document.getElementById("welcome-ch").textContent = data.welcomeMessage.chinese;
+                    document.getElementById("welcome-en").textContent = data.welcomeMessage.english;
+
+                    // 生成按钮
+                    let buttonContainer = document.getElementById("button-container");
+                    buttonContainer.innerHTML = ""; // 清空容器
+                    data.buttons.forEach(button => {
+                        let btn = document.createElement("a");
+                        btn.textContent = button.text;
+                        btn.href = button.href;
+                        btn.classList.add("button");
+                        buttonContainer.appendChild(btn);
+                    });
+
+                    // 设置页脚文本
+                    document.querySelector(".foottitle").textContent = data.footerText;
+                })
+                .catch(error => {
+                    console.error('加载 JSON 失败:', error);
+                    document.body.innerHTML = "<h1>加载失败，请检查 content.json 文件路径是否正确</h1>";
+                });
+        };
+    </script>
+</body>
+</html>
