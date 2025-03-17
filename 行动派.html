@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="page-title"></title>
+    <style id="page-styles"></style>
+</head>
+
+<body>
+    <!-- 这里可以保留一些基础的 HTML 结构 -->
+    <canvas id="stars"></canvas>
+    <div class="confirm">
+        <div class="confirm-body">
+            <h2 class="confirm-body-title"></h2>
+            <p class="confirm-body-subtitle"></p>
+            <a href="#" class="confirm-body-button confirm-body-button-delete">Delete</a>
+            <a href="#" class="confirm-body-button confirm-body-button-cancel">Cancel</a>
+        </div>
+    </div>
+    <div class="accepted hidden">
+        <div class="accepted-body">
+            <h2 class="accepted-body-title"></h2>
+            <p class="accepted-body-subtitle"></p>
+            <a href="#" class="accepted-body-button">OK</a>
+        </div>
+    </div>
+    <div class="rejected hidden">
+        <div class="rejected-body">
+            <h2 class="rejected-body-title"></h2>
+            <p class="rejected-body-subtitle"></p>
+            <a href="#" class="rejected-body-button">OK</a>
+        </div>
+    </div>
+    <div class="boi"></div>
+
+    <script>
+        fetch('json/3.json')
+          .then(response => response.json())
+          .then(data => {
+                // 设置页面标题
+                document.getElementById('page-title').textContent = data.title;
+                // 设置页面样式
+                document.getElementById('page-styles').textContent = data.styles;
+            })
+          .catch(error => console.error('Error loading content.json:', error));
+    </script>
+</body>
+
+</html>
